@@ -1,5 +1,8 @@
-// here I didn't add many thing changed usePathname line and
-// didn't use 'use client'
+
+// I've given 'use client' but didnt' install the clsx
+// that's why it keeps me giving errors.
+
+'use client';
 
 import {
   UserGroupIcon,
@@ -7,7 +10,7 @@ import {
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import  usePathname  from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
 const links = [
@@ -21,7 +24,7 @@ const links = [
 ];
 
 export default function NavLinks() {
-  const pathname = usePathname;
+  const pathname = usePathname();
 
   return (
       <>
